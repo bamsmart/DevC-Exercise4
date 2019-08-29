@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <title>Introduction to jQuery</title>
+    <script type="text/javascript" src="../Assets/js/jquery-3.4.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div>
+        <ul>
+            <li id="list"><a href="http://www.ujifisika.shinesdev.com">Please Click Me!</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <script type="text/javascript">
+        // mouseover
+        // mouseleave
+        // keypress
+        // focus
+        // blur
+        // dbllclik
+
+
+        // Even Bubbling memasang event listener ke parent
+        // kenapa? 
+
+
+        $('#list').on('click', 'a', function(event) {
+            event.preventDefault(); // untuk menyetop even bawaan
+
+            console.log($(this).text());
+
+            //event.stopPropagation();
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Introduction to jQuery</title>
+    <script type="text/javascript" src="../Assets/js/jquery-3.4.1.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1>Ini Title</h1>
+    <div id="notification">
+        Ini notification
+    </div>
+
+    <div class="container" style="height: 20px;width:100%; background-color:aqua;">
+        ini container
+    </div>
+
+    <br />
+    <img>
+
+    <br />
+    <div>
+        <button> Click Me</button>
+        <p>.... </p>
+    </div>
+
+    <script type="text/javascript">
+        //$('body').text('Helo Bambang T. Lasiman');
+
+        $('body').css('background-color', 'white');
+
+        // if we do not use jQuery it will be like this
+        // document.querySelector('h1')
+        $('h1').text('Replaced by : "Halo Yuliani!"');
+
+        $('img').attr('src', '../img/');
+
+        $('#notification').css('width', '100%')
+        $('#notification').css('height', '20px')
+
+        $('#notification').html("<div class='alert'>Hold On ...</div>");
+
+        $('.container').append("<p> What is your plan</p>");
+
+
+        $(document).ready(function() {
+            $('button').click(function() {
+                $('p').text('Oke, You Click Me, Thanks!');
+            })
+        })
+    </script>
+</body>
+
+</html>
